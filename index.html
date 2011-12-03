@@ -1,1 +1,146 @@
-Hello world!
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="js/bootstrap-twipsy.js"></script>
+        <script src="js/progress-bar.js"></script>
+        <script>
+            $(document).ready(function() {
+                var sleekxmpp_bar;
+                var thoonk_bar;
+                var redisbook_bar;
+                sleekBar = new ProgressBar('sleekxmpp-pc', 'sleekxmpp-progress');
+                sleekBar.fillTo(95,600)
+                thoonkBar = new ProgressBar('thoonk-pc', 'thoonk-progress');
+                thoonkBar.fillTo(65,600)
+                bookBar = new ProgressBar('book-pc', 'book-progress');
+                bookBar.fillTo(5,600)
+            });
+        </script>
+        <style>
+            #sleekxmpp-pc{
+                background-color: #f0f0f0;
+            }
+            #sleekxmpp-progress{
+                background-color: green;
+                height: 1.5em;
+                width: 0px;
+            }
+            #thoonk-pc{
+                background-color: #f0f0f0;
+            }
+            #thoonk-progress{
+                background-color: yellow;
+                height: 1.5em;
+                width: 0px;
+            }
+            #book-pc{
+                background-color: #f0f0f0;
+            }
+            #book-progress{
+                background-color: red;
+                height: 1.5em;
+                width: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='container-fluid'>
+            <div class="sidebar">
+                <div class="well">
+                  <h5>Open Code</h5>
+                  <ul>
+                    <li><a href="https://github.com/fritzy/SleekXMPP">SleekXMPP</a></li>
+                    <li><a href="https://github.com/andyet/thoonk.js">Thoonk.js</a></li>
+                    <li><a href="https://github.com/andyet/thoonk.py">Thoonk.py</a></li>
+                  </ul>
+                  <h5>Find Me Elsewhere</h5>
+                  <ul id='thingy'>
+                    <li><a href="http://twitter.com/fritzy" data-placement="above" rel="twipsy" title="Twitter">@fritzy</a></li>
+                    <li><a href="https://github.com//fritzy" data-placement="right" rel="twipsy" title="Github">/fritzy</a></li>
+                    <li><a href="https://plus.google.com/113504933383608010238/posts" data-placement="below" rel="twipsy" title="Google">+Nathan Fritz</a></li>
+                  </ul>
+                  <h5>Employer</h5>
+                  <ul>
+                    <li><a href="http://andyet.net/">&amp;yet</a></li>
+                    <li><a href="https://github.com/andyet">&amp;yet's Github</a></li>
+                    <li><a href="http:/andyet.net/blog">&amp;yet's Blog</a></li>
+                  </ul>
+                </div>
+            </div>
+            <div class='content'>
+                <div class='hero-unit'>
+                    <h1>Nathan Fritz <small>aka Fritzy</small></h1>
+                    <p>Ok, here is where I will talk about myself. Blah blah blah, modem</p>
+                </div>
+                <div class='row'>
+                    <div class='span16'>
+                        <div class='page-header'>
+                            <h2>Current Project Progress</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='span16'>
+                        <p><strong>SleekXMPP</strong> is currently on RC3. Lance and I have gotten things to a very stable place. We're working on filling out more documentation before we call this 1.0.</p>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='span3'>
+                        SleekXMPP 1.0
+                    </div>
+                    <div class='span12' id='sleekxmpp-pc'>
+                        <div id='sleekxmpp-progress'></div>
+                    </div>
+                    <div class='span1'>
+                        95%
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='span16'>
+                        <hr />
+                        <p>I'm currently working on converting the contract to Lua scripts in <strong>Thoonk</strong>. I'm anticipating having the API stable and Python and Node.js implementations finished in time for Redis 2.6.</p>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='span3'>
+                        Thoonk RC1
+                    </div>
+                    <div class='span12' id='thoonk-pc'>
+                        <div id='thoonk-progress'></div>
+                    </div>
+                    <div class='span1'>
+                        65%
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='span16'>
+                        <hr />
+                        <p>Work on <strong>Redis Patterns & Theory</strong> is just starting. I have an outline, solid ideas on what I want to say, tools picked out, and a list of recipes to write.</p>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='span3'>
+                        Redis Patterns &amp; Theories
+                    </div>
+                    <div class='span12' id='book-pc'>
+                        <div id='book-progress'></div>
+                    </div>
+                    <div class='span1'>
+                        05%
+                    </div>
+                </div>
+        <footer>
+          <p>&copy; Nathan Fritz 2011</p>
+        </footer>
+            </div>
+        </div>
+          <script>
+            $(function () {
+              $("a[rel=twipsy]").twipsy({
+                live: true
+              })
+            });
+          </script>
+    </body>
+</html>
